@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="download-container">
+        <form action="{% url 'access-db' %}" method="POST">
+            {% csrf_token %}
+            <input type="submit" class="button" value="Download">
+        </form>
+    </div>
+{% endblock %}
